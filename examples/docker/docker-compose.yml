@@ -1,0 +1,56 @@
+version: "2"
+services:
+
+  nginx:
+    depends_on:
+      - "fluentbit"
+    logging:
+      driver: "fluentd"
+    image: nginx
+    restart: always
+    volumes:
+      - web_data:/usr/share/nginx/html
+    ports:
+      - "80:80"
+
+  mysql:
+    depends_on:
+      - "fluentbit"
+    image: mariadb
+    logging:
+      driver: "fluentd"
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  redis:
+    depends_on:
+      - "fluentbit"
+    image: redis
+    logging:
+      driver: "fluentd"
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  fluentbit:
+    ports:
+      - 24224:24224
+    image: cr.fluentbit.io/fluent/fluent-bit:2.0
+    volumes:
+      - ./fluentbit.conf:/etc/fluentbit.conf
+    command:
+      - "-c"
+      - "/etc/fluentbit.conf"
+
+volumes:
+  redis_data:
+  mysql_data:
+  web_data:

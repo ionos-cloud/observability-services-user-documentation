@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver
+  labels:
+    my_custom_pod_name: nginx # mandatory if we use extract_kubernetes_labels true in Fluentd
+spec:
+  containers:
+    - name: test
+      image: nginx:latest
+      ports:
+        - containerPort: 80
