@@ -1,0 +1,17 @@
+# Others
+data/
+*.gz
+gomon_spawn
+.vscode
+.idea
+.env.local
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Sensible Editors
+.idea/
+*.iml
+.vscode/
+

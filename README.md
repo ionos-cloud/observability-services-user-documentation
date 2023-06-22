@@ -1,1 +1,1 @@
-# laas-user-documentation
+# Logging Service User Documentation
