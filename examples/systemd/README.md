@@ -2,7 +2,7 @@
 To use Logging Service in a Linux system with systemd journald you need to install an appropriate package for your distribution. Instructions on doing so can be found on the official [Fluent Bit Website](https://docs.fluentbit.io/manual/installation/getting-started-with-fluent-bit).
 
 ## Provision a Pipeline
-Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines) with source: kubernetes
+Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines) with source: systemd
 
 ### Example API Request Body
 ```json
