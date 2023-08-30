@@ -29,8 +29,8 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
 ```
 
 ## Usage:
-1. Grab the key from the above response or provision a new key using REST API (https://logging.de-txl.ionos.com/pipelines/<PIPELINE_ID>/key)
-2. Put provided tcp input endpoint, token and the tag into fluentbit.conf file
+1. Grab the key from the above response or provision a new key using REST API (https://logging.de-txl.ionos.com/pipelines/<PIPELINE_ID>/key).
+2. Put provided tcp input endpoint, token and the tag into fluentbit.conf file.
 3. Install `Fluent Bit` package, appropriate for your distribution.
 4. Configure Fluent Bit to use source you want.
-5Profit
+5. Profit.
