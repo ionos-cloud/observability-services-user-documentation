@@ -29,7 +29,7 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
 ## Usage:
 1. Grab the key from the above response or provision a new key using REST API (https://logging.de-txl.ionos.com/pipelines/<PIPELINE_ID>/key)
 2. Also grab the `httpAddress` from RESP API when the pipeline is ready.
-3. Send an example log ingestion as bellow (`myhttp` is the tag is created with the request above):
+3. Send an example log ingestion as below (`myhttp` is the tag is created with the request above):
 
 ```bash
 curl -X "POST" "<HTTP-ADDRESS>/myhttp" \
