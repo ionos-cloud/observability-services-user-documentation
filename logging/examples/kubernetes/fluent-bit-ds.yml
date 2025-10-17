@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: fluent-bit
-          image: fluent/fluent-bit:1.9-debug
+          image: fluent/fluent-bit:latest
           imagePullPolicy: Always
           volumeMounts:
             - name: varlog
