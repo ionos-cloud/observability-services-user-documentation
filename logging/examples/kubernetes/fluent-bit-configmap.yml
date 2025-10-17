@@ -30,6 +30,8 @@ data:
         Skip_Long_Lines     Off
         Refresh_Interval    10
         Exclude_Path        /var/log/containers/*_logging_*.log,/var/log/containers/*kube*.log
+        # Less restrictive option
+        # Exclude_Path        /var/log/containers/fluent-bit*, /var/log/containers/*kube*.log
 #        To process and keep it simple, we exclude logging and control plane pods
 
   filter-kubernetes.conf: |
