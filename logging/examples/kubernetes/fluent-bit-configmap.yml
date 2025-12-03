@@ -61,7 +61,7 @@ data:
         Tag             <TAG>
         Host            <TCP_ENDPOINT>
         tls             on
-        Shared_Key      <TOKEN>
+        Shared_Key      <KEY>
 
   parsers.conf: |
     [PARSER]
