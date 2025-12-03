@@ -14,6 +14,9 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
         "source": "generic",
         "tag": "myhttp",
         "protocol": "http",
+        "labels": [
+          "mylabel"
+        ],
          "destinations": [
           {
             "type": "loki",
@@ -44,7 +47,7 @@ curl -X "POST" "<HTTP-ADDRESS>/myhttp" \
   },
   "msg": "Pod status updated",
   "level": "error",
-  "label_1": "new_again_2"
+  "mylabel": "pod_error"
 }'
 
 ```

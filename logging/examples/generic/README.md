@@ -16,6 +16,9 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
         "source": "generic",
         "tag": "customtcp",
         "protocol": "tcp",
+        "labels": [
+          "genlabel1", "genlabel2"
+        ],
          "destinations": [
           {
             "type": "loki",
