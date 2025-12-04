@@ -8,12 +8,15 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
 ```json
 {
   "properties": {
-    "name": "systemd tcp",
+    "name": "systemd-tcp",
     "logs": [
       {
         "source": "systemd",
         "tag": "sys",
         "protocol": "tcp",
+        "labels": [
+          "syslabel1", "syslabel2"
+        ],
          "destinations": [
           {
             "type": "loki",
@@ -33,3 +36,8 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
 4. Configure Fluent Bit to use source `systemd` and appropriate unit filters (example is `fluentbit.conf`). 
 5. Start services you've set in `systemd unit` filters in config 
 6. Profit
+
+## Helpful Links:
+- [Rest Api Documentation](https://api.ionos.com/docs/logging/v1/)
+- [Fluent Bit Systemd Input Documentation](https://docs.fluentbit.io/manual/data-pipeline/inputs/systemd#fluent-bit.conf)
+- [Fluent Bit Record Modifier Documentation](https://docs.fluentbit.io/manual/data-pipeline/filters/record-modifier)

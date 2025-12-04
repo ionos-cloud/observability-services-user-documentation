@@ -14,6 +14,9 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
         "source": "kubernetes",
         "tag": "k8s",
         "protocol": "tcp",
+        "labels": [
+          "k8slabel1", "k8slabel2"
+        ],
          "destinations": [
           {
             "type": "loki",

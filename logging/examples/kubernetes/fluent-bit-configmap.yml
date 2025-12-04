@@ -48,16 +48,20 @@ data:
         Keep_Log            Off
         K8S-Logging.Parser  On
         K8S-Logging.Exclude Off
+    [FILTER]
+        Name   record_modifier
+        Match  *
+        Record <LABEL_NAME> <VALUE>
 
   output-fluentd.conf: |
     [OUTPUT]
-      Name            forward
-      Match           *
-      Port            9000
-      Tag             <TAG>
-      Host            <TCP_ENDPOINT>
-      tls             on
-      Shared_Key      <KEY>
+        Name            forward
+        Match           *
+        Port            9000
+        Tag             <TAG>
+        Host            <TCP_ENDPOINT>
+        tls             on
+        Shared_Key      <KEY>
 
   parsers.conf: |
     [PARSER]

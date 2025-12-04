@@ -14,6 +14,9 @@ Provision a Pipeline using REST API (https://logging.de-txl.ionos.com/pipelines)
         "source": "docker",
         "tag": "dock",
         "protocol": "tcp",
+        "labels": [
+          "dlabel1", "dlabel2"
+        ],
          "destinations": [
           {
             "type": "loki",
